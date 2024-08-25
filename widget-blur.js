@@ -162,7 +162,7 @@ async function generateAlert(message,options) {
 function cropImage(image) {
    
   let draw = new DrawContext()
-  let rect = new Rect(crop.x,crop.y,crop.w,crop.h)
+  let rect = new Rect(crop.x,crop.y-30,crop.w,crop.h)
   draw.size = new Size(rect.width, rect.height)
   
   draw.drawImageAtPoint(image,new Point(-rect.x, -rect.y))  
